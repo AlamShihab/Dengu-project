@@ -1,0 +1,2225 @@
+{
+  "geography_version": "1.0",
+  "source": "BBS pcodes and names from data/reference/gazetteer.csv (copied from bd-health-signals); DGHS division order as printed in the daily press-release district table",
+  "metro": {
+    "code": "DHAKA_METRO",
+    "name": "Dhaka Metropolitan (city hospitals)",
+    "name_bn": "ঢাকা মহানগর",
+    "division_code": "BD30",
+    "parent_district": "BD3026",
+    "lat": 23.7808,
+    "lon": 90.4123,
+    "note": "DGHS reports Dhaka city hospitals separately; the Dhaka district row excludes them"
+  },
+  "district_display_names": {
+    "BD3026": "Dhaka (outside metropolitan)"
+  },
+  "divisions": [
+    {
+      "code": "BD30",
+      "name": "Dhaka",
+      "name_bn": "ঢাকা",
+      "lat": 23.8214,
+      "lon": 90.2374,
+      "districts": [
+        {
+          "code": "BD3026",
+          "name": "Dhaka",
+          "name_bn": "ঢাকা",
+          "lat": 23.7818,
+          "lon": 90.3569
+        },
+        {
+          "code": "BD3029",
+          "name": "Faridpur",
+          "name_bn": "ফরিদপুর",
+          "lat": 23.466,
+          "lon": 89.8717
+        },
+        {
+          "code": "BD3033",
+          "name": "Gazipur",
+          "name_bn": "গাজীপুর",
+          "lat": 24.0927,
+          "lon": 90.4074
+        },
+        {
+          "code": "BD3035",
+          "name": "Gopalganj",
+          "name_bn": "গোপালগঞ্জ",
+          "lat": 23.1064,
+          "lon": 89.8627
+        },
+        {
+          "code": "BD3048",
+          "name": "Kishoreganj",
+          "name_bn": "কিশোরগঞ্জ",
+          "lat": 24.3361,
+          "lon": 90.9284
+        },
+        {
+          "code": "BD3054",
+          "name": "Madaripur",
+          "name_bn": "মাদারীপুর",
+          "lat": 23.231,
+          "lon": 90.1338
+        },
+        {
+          "code": "BD3056",
+          "name": "Manikganj",
+          "name_bn": "মানিকগঞ্জ",
+          "lat": 23.8348,
+          "lon": 89.9429
+        },
+        {
+          "code": "BD3059",
+          "name": "Munshiganj",
+          "name_bn": "মুন্সীগঞ্জ",
+          "lat": 23.526,
+          "lon": 90.4378
+        },
+        {
+          "code": "BD3067",
+          "name": "Narayanganj",
+          "name_bn": "নারায়ণগঞ্জ",
+          "lat": 23.7158,
+          "lon": 90.6162
+        },
+        {
+          "code": "BD3068",
+          "name": "Narsingdi",
+          "name_bn": "নরসিংদী",
+          "lat": 24.0088,
+          "lon": 90.8088
+        },
+        {
+          "code": "BD3082",
+          "name": "Rajbari",
+          "name_bn": "রাজবাড়ী",
+          "lat": 23.7352,
+          "lon": 89.5763
+        },
+        {
+          "code": "BD3086",
+          "name": "Shariatpur",
+          "name_bn": "শরীয়তপুর",
+          "lat": 23.2285,
+          "lon": 90.4226
+        },
+        {
+          "code": "BD3093",
+          "name": "Tangail",
+          "name_bn": "টাঙ্গাইল",
+          "lat": 24.3766,
+          "lon": 90.0016
+        }
+      ]
+    },
+    {
+      "code": "BD45",
+      "name": "Mymensingh",
+      "name_bn": "ময়মনসিংহ",
+      "lat": 24.8387,
+      "lon": 90.4029,
+      "districts": [
+        {
+          "code": "BD4539",
+          "name": "Jamalpur",
+          "name_bn": "জামালপুর",
+          "lat": 24.9987,
+          "lon": 89.7782
+        },
+        {
+          "code": "BD4561",
+          "name": "Mymensingh",
+          "name_bn": "ময়মনসিংহ",
+          "lat": 24.7244,
+          "lon": 90.4176
+        },
+        {
+          "code": "BD4572",
+          "name": "Netrokona",
+          "name_bn": "নেত্রকোনা",
+          "lat": 24.8822,
+          "lon": 90.8343
+        },
+        {
+          "code": "BD4589",
+          "name": "Sherpur",
+          "name_bn": "শেরপুর",
+          "lat": 25.0919,
+          "lon": 90.0952
+        }
+      ]
+    },
+    {
+      "code": "BD20",
+      "name": "Chattogram",
+      "name_bn": "চট্টগ্রাম",
+      "lat": 22.5041,
+      "lon": 92.1216,
+      "districts": [
+        {
+          "code": "BD2003",
+          "name": "Bandarban",
+          "name_bn": "বান্দরবান",
+          "lat": 21.7707,
+          "lon": 92.387
+        },
+        {
+          "code": "BD2012",
+          "name": "Brahmanbaria",
+          "name_bn": "ব্রাহ্মণবাড়িয়া",
+          "lat": 23.9563,
+          "lon": 91.1117
+        },
+        {
+          "code": "BD2013",
+          "name": "Chandpur",
+          "name_bn": "চাঁদপুর",
+          "lat": 23.2452,
+          "lon": 90.8418
+        },
+        {
+          "code": "BD2015",
+          "name": "Chattogram",
+          "name_bn": "চট্টগ্রাম",
+          "lat": 22.4236,
+          "lon": 92.0401
+        },
+        {
+          "code": "BD2022",
+          "name": "Cox's Bazar",
+          "name_bn": "কক্সবাজার",
+          "lat": 21.3328,
+          "lon": 92.0921
+        },
+        {
+          "code": "BD2019",
+          "name": "Cumilla",
+          "name_bn": "কুমিল্লা",
+          "lat": 23.422,
+          "lon": 91.0763
+        },
+        {
+          "code": "BD2030",
+          "name": "Feni",
+          "name_bn": "ফেনী",
+          "lat": 23.0208,
+          "lon": 91.4019
+        },
+        {
+          "code": "BD2046",
+          "name": "Khagrachhari",
+          "name_bn": "খাগড়াছড়ি",
+          "lat": 23.2139,
+          "lon": 91.9611
+        },
+        {
+          "code": "BD2051",
+          "name": "Lakshmipur",
+          "name_bn": "লক্ষ্মীপুর",
+          "lat": 22.8694,
+          "lon": 90.8674
+        },
+        {
+          "code": "BD2075",
+          "name": "Noakhali",
+          "name_bn": "নোয়াখালী",
+          "lat": 22.7868,
+          "lon": 91.1316
+        },
+        {
+          "code": "BD2084",
+          "name": "Rangamati",
+          "name_bn": "রাঙ্গামাটি",
+          "lat": 22.793,
+          "lon": 92.223
+        }
+      ]
+    },
+    {
+      "code": "BD40",
+      "name": "Khulna",
+      "name_bn": "খুলনা",
+      "lat": 23.0928,
+      "lon": 89.2869,
+      "districts": [
+        {
+          "code": "BD4001",
+          "name": "Bagerhat",
+          "name_bn": "বাগেরহাট",
+          "lat": 22.5235,
+          "lon": 89.7543
+        },
+        {
+          "code": "BD4018",
+          "name": "Chuadanga",
+          "name_bn": "চুয়াডাঙ্গা",
+          "lat": 23.6054,
+          "lon": 88.8235
+        },
+        {
+          "code": "BD4041",
+          "name": "Jashore",
+          "name_bn": "যশোর",
+          "lat": 23.0855,
+          "lon": 89.1258
+        },
+        {
+          "code": "BD4044",
+          "name": "Jhenaidah",
+          "name_bn": "ঝিনাইদহ",
+          "lat": 23.4947,
+          "lon": 89.1235
+        },
+        {
+          "code": "BD4047",
+          "name": "Khulna",
+          "name_bn": "খুলনা",
+          "lat": 22.5025,
+          "lon": 89.4191
+        },
+        {
+          "code": "BD4050",
+          "name": "Kushtia",
+          "name_bn": "কুষ্টিয়া",
+          "lat": 23.9433,
+          "lon": 89.0244
+        },
+        {
+          "code": "BD4055",
+          "name": "Magura",
+          "name_bn": "মাগুরা",
+          "lat": 23.4709,
+          "lon": 89.4564
+        },
+        {
+          "code": "BD4057",
+          "name": "Meherpur",
+          "name_bn": "মেহেরপুর",
+          "lat": 23.7896,
+          "lon": 88.7016
+        },
+        {
+          "code": "BD4065",
+          "name": "Narail",
+          "name_bn": "নড়াইল",
+          "lat": 23.1324,
+          "lon": 89.5287
+        },
+        {
+          "code": "BD4087",
+          "name": "Satkhira",
+          "name_bn": "সাতক্ষীরা",
+          "lat": 22.4747,
+          "lon": 89.1384
+        }
+      ]
+    },
+    {
+      "code": "BD50",
+      "name": "Rajshahi",
+      "name_bn": "রাজশাহী",
+      "lat": 24.543,
+      "lon": 88.939,
+      "districts": [
+        {
+          "code": "BD5010",
+          "name": "Bogura",
+          "name_bn": "বগুড়া",
+          "lat": 24.8304,
+          "lon": 89.3314
+        },
+        {
+          "code": "BD5070",
+          "name": "Chapainawabganj",
+          "name_bn": "চাঁপাইনবাবগঞ্জ",
+          "lat": 24.6927,
+          "lon": 88.2599
+        },
+        {
+          "code": "BD5038",
+          "name": "Joypurhat",
+          "name_bn": "জয়পুরহাট",
+          "lat": 25.0625,
+          "lon": 89.0916
+        },
+        {
+          "code": "BD5064",
+          "name": "Naogaon",
+          "name_bn": "নওগাঁ",
+          "lat": 24.8729,
+          "lon": 88.7388
+        },
+        {
+          "code": "BD5069",
+          "name": "Natore",
+          "name_bn": "নাটোর",
+          "lat": 24.3939,
+          "lon": 89.0907
+        },
+        {
+          "code": "BD5076",
+          "name": "Pabna",
+          "name_bn": "পাবনা",
+          "lat": 24.081,
+          "lon": 89.3384
+        },
+        {
+          "code": "BD5081",
+          "name": "Rajshahi",
+          "name_bn": "রাজশাহী",
+          "lat": 24.4152,
+          "lon": 88.5966
+        },
+        {
+          "code": "BD5088",
+          "name": "Sirajganj",
+          "name_bn": "সিরাজগঞ্জ",
+          "lat": 24.398,
+          "lon": 89.5231
+        }
+      ]
+    },
+    {
+      "code": "BD55",
+      "name": "Rangpur",
+      "name_bn": "রংপুর",
+      "lat": 25.8375,
+      "lon": 88.9694,
+      "districts": [
+        {
+          "code": "BD5527",
+          "name": "Dinajpur",
+          "name_bn": "দিনাজপুর",
+          "lat": 25.6416,
+          "lon": 88.7262
+        },
+        {
+          "code": "BD5532",
+          "name": "Gaibandha",
+          "name_bn": "গাইবান্ধা",
+          "lat": 25.3432,
+          "lon": 89.5362
+        },
+        {
+          "code": "BD5549",
+          "name": "Kurigram",
+          "name_bn": "কুড়িগ্রাম",
+          "lat": 25.8034,
+          "lon": 89.6446
+        },
+        {
+          "code": "BD5552",
+          "name": "Lalmonirhat",
+          "name_bn": "লালমনিরহাট",
+          "lat": 26.1223,
+          "lon": 89.1644
+        },
+        {
+          "code": "BD5573",
+          "name": "Nilphamari",
+          "name_bn": "নীলফামারী",
+          "lat": 26.0197,
+          "lon": 88.9217
+        },
+        {
+          "code": "BD5577",
+          "name": "Panchagarh",
+          "name_bn": "পঞ্চগড়",
+          "lat": 26.3201,
+          "lon": 88.5469
+        },
+        {
+          "code": "BD5585",
+          "name": "Rangpur",
+          "name_bn": "রংপুর",
+          "lat": 25.6333,
+          "lon": 89.262
+        },
+        {
+          "code": "BD5594",
+          "name": "Thakurgaon",
+          "name_bn": "ঠাকুরগাঁও",
+          "lat": 25.9358,
+          "lon": 88.3105
+        }
+      ]
+    },
+    {
+      "code": "BD10",
+      "name": "Barishal",
+      "name_bn": "বরিশাল",
+      "lat": 22.465,
+      "lon": 90.2711,
+      "districts": [
+        {
+          "code": "BD1004",
+          "name": "Barguna",
+          "name_bn": "বরগুনা",
+          "lat": 22.1728,
+          "lon": 90.2037
+        },
+        {
+          "code": "BD1006",
+          "name": "Barishal",
+          "name_bn": "বরিশাল",
+          "lat": 22.7613,
+          "lon": 90.3251
+        },
+        {
+          "code": "BD1009",
+          "name": "Bhola",
+          "name_bn": "ভোলা",
+          "lat": 22.4051,
+          "lon": 90.7686
+        },
+        {
+          "code": "BD1042",
+          "name": "Jhalokati",
+          "name_bn": "ঝালকাঠি",
+          "lat": 22.5617,
+          "lon": 90.1724
+        },
+        {
+          "code": "BD1078",
+          "name": "Patuakhali",
+          "name_bn": "পটুয়াখালী",
+          "lat": 22.2584,
+          "lon": 90.4599
+        },
+        {
+          "code": "BD1079",
+          "name": "Pirojpur",
+          "name_bn": "পিরোজপুর",
+          "lat": 22.5141,
+          "lon": 89.9952
+        }
+      ]
+    },
+    {
+      "code": "BD60",
+      "name": "Sylhet",
+      "name_bn": "সিলেট",
+      "lat": 24.5923,
+      "lon": 91.7182,
+      "districts": [
+        {
+          "code": "BD6036",
+          "name": "Habiganj",
+          "name_bn": "হবিগঞ্জ",
+          "lat": 24.3382,
+          "lon": 91.4308
+        },
+        {
+          "code": "BD6058",
+          "name": "Moulvibazar",
+          "name_bn": "মৌলভীবাজার",
+          "lat": 24.4861,
+          "lon": 91.8821
+        },
+        {
+          "code": "BD6090",
+          "name": "Sunamganj",
+          "name_bn": "সুনামগঞ্জ",
+          "lat": 24.8885,
+          "lon": 91.3852
+        },
+        {
+          "code": "BD6091",
+          "name": "Sylhet",
+          "name_bn": "সিলেট",
+          "lat": 24.8905,
+          "lon": 91.9582
+        }
+      ]
+    }
+  ],
+  "aliases": {
+    "ঢাকা": "BD3026",
+    "ফরিদপুি": "BD3029",
+    "গাজীপুি": "BD3033",
+    "বগাপালগঞ্জ": "BD3035",
+    "রকমািগঞ্জ": "BD3048",
+    "াদািীপুি": "BD3054",
+    "ারনকগঞ্জ": "BD3056",
+    "মুরিরগঞ্জ": "BD3059",
+    "নািায়ণগঞ্জ": "BD3067",
+    "নিরসিংদী": "BD3068",
+    "িাজোড়ী": "BD3082",
+    "িীয়তপুি": "BD3086",
+    "টাঙ্গাইল": "BD3093",
+    "য়নরসিংহ": "BD4561",
+    "জাালপুি": "BD4539",
+    "বিপুি": "BD4589",
+    "বনত্রমকানা": "BD4572",
+    "চট্টগ্রা": "BD2015",
+    "কক্সোজাি": "BD2022",
+    "িাঙ্গাাটি": "BD2084",
+    "খাগড়াছরড়": "BD2046",
+    "োন্দিোন": "BD2003",
+    "বফনী": "BD2030",
+    "কুরল্লা": "BD2019",
+    "চাঁদপুি": "BD2013",
+    "লক্ষীপুি": "BD2051",
+    "বনায়াখালী": "BD2075",
+    "ব্রাহ্মনোরড়য়া": "BD2012",
+    "খুলনা": "BD4047",
+    "োমগিহাট": "BD4001",
+    "সাতক্ষীিা": "BD4087",
+    "যমাি": "BD4041",
+    "রিনাইদহ": "BD4044",
+    "াগুিা": "BD4055",
+    "নড়াইল": "BD4065",
+    "কুরিয়া": "BD4050",
+    "চুয়ািাঙ্গা": "BD4018",
+    "বমহিপুি": "BD4057",
+    "িাজাহী": "BD5081",
+    "চাপাইনোেগঞ্জ": "BD5070",
+    "নওগাঁ": "BD5064",
+    "নামটাি": "BD5069",
+    "জয়পুিহাট": "BD5038",
+    "েগুড়া": "BD5010",
+    "রসিাজগঞ্জ": "BD5088",
+    "পােনা": "BD5076",
+    "িিংপুি": "BD5585",
+    "লালরনিহাট": "BD5552",
+    "কুরড়গ্রা": "BD5549",
+    "নীলফাািী": "BD5573",
+    "রদনাজপুি": "BD5527",
+    "গাইোন্ধা": "BD5532",
+    "ঠাকুিগাঁও": "BD5594",
+    "পঞ্চগড়": "BD5577",
+    "েরিাল": "BD1006",
+    "পটুয়াখালী": "BD1078",
+    "বভালা": "BD1009",
+    "রপমিাজপুি": "BD1079",
+    "েিগুনা": "BD1004",
+    "িালকাঠি": "BD1042",
+    "রসমলট": "BD6091",
+    "সুনাগঞ্জ": "BD6090",
+    "হরেগঞ্জ": "BD6036",
+    "বৌলভীোজাি": "BD6058",
+    "ফতরদপুর": "BD3029",
+    "গাজীপুর": "BD3033",
+    "তকমারগঞ্জ": "BD3048",
+    "াদারীপুর": "BD3054",
+    "াতনকগঞ্জ": "BD3056",
+    "মুতিতগঞ্জ": "BD3059",
+    "নারায়ণগঞ্জ": "BD3067",
+    "নরতসিংদী": "BD3068",
+    "রাজোড়ী": "BD3082",
+    "রীয়িপুর": "BD3086",
+    "য়নতসিংহ": "BD4561",
+    "জাালপুর": "BD4539",
+    "বরপুর": "BD4589",
+    "কক্সোজার": "BD2022",
+    "রাঙ্গাাটি": "BD2084",
+    "খাগড়াছতড়": "BD2046",
+    "োন্দরোন": "BD2003",
+    "কুতল্লা": "BD2019",
+    "চাঁদপুর": "BD2013",
+    "লক্ষীপুর": "BD2051",
+    "ব্রাহ্মনোতড়য়া": "BD2012",
+    "োমগরহাট": "BD4001",
+    "সািক্ষীরা": "BD4087",
+    "যমার": "BD4041",
+    "তিনাইদহ": "BD4044",
+    "াগুরা": "BD4055",
+    "কুতিয়া": "BD4050",
+    "বমহরপুর": "BD4057",
+    "রাজাহী": "BD5081",
+    "নামটার": "BD5069",
+    "জয়পুরহাট": "BD5038",
+    "তসরাজগঞ্জ": "BD5088",
+    "রিংপুর": "BD5585",
+    "লালতনরহাট": "BD5552",
+    "কুতড়গ্রা": "BD5549",
+    "নীলফাারী": "BD5573",
+    "তদনাজপুর": "BD5527",
+    "ঠাকুরগাঁও": "BD5594",
+    "েতরাল": "BD1006",
+    "তপমরাজপুর": "BD1079",
+    "েরগুনা": "BD1004",
+    "তসমলট": "BD6091",
+    "হতেগঞ্জ": "BD6036",
+    "বৌলভীোজার": "BD6058",
+    "রকমশািগঞ্জ": "BD3048",
+    "শিীয়তপুি": "BD3086",
+    "বশিপুি": "BD4589",
+    "যমশাি": "BD4041",
+    "িাজশাহী": "BD5081",
+    "েরিশাল": "BD1006",
+    "গািীপুি": "BD3033",
+    "রকমোিগঞ্জ": "BD3048",
+    "িািোড়ী": "BD3082",
+    "েিীয়তপুি": "BD3086",
+    "িাালপুি": "BD4539",
+    "বেিপুি": "BD4589",
+    "কক্সোিাি": "BD2022",
+    "যমোি": "BD4041",
+    "িািোহী": "BD5081",
+    "িয়পুিহাট": "BD5038",
+    "রসিািগঞ্জ": "BD5088",
+    "রদনািপুি": "BD5527",
+    "েরিোল": "BD1006",
+    "রপমিািপুি": "BD1079",
+    "বৌলভীোিাি": "BD6058",
+    "ফরিদপযি": "BD3029",
+    "গাজীপযি": "BD3033",
+    "াদািীপযি": "BD3054",
+    "যরিরগঞ্জ": "BD3059",
+    "শিীয়তপযি": "BD3086",
+    "জাালপযি": "BD4539",
+    "বশিপযি": "BD4589",
+    "চাঁদপযি": "BD2013",
+    "লক্ষীপযি": "BD2051",
+    "খযলনা": "BD4047",
+    "চযয়ািাঙ্গা": "BD4018",
+    "বমহিপযি": "BD4057",
+    "জয়পযিহাট": "BD5038",
+    "িিংপযি": "BD5585",
+    "রদনাজপযি": "BD5527",
+    "পটযয়াখালী": "BD1078",
+    "রপমিাজপযি": "BD1079",
+    "সযনাগঞ্জ": "BD6090",
+    "মুরিগঞ্জ": "BD3059",
+    "যরিগঞ্জ": "BD3059",
+    "িীয়তপযি": "BD3086",
+    "বিপযি": "BD4589"
+  },
+  "alias_review": {
+    "ঢাকা": {
+      "code": "BD3026",
+      "votes": 1648,
+      "total": 1648,
+      "share": 1.0,
+      "similarity": 1.0,
+      "alternatives": {},
+      "example": "ঢাকা",
+      "reviewed": true
+    },
+    "ফরিদপুি": {
+      "code": "BD3029",
+      "votes": 1453,
+      "total": 1453,
+      "share": 1.0,
+      "similarity": 0.889,
+      "alternatives": {},
+      "example": "ফরিদপুি",
+      "reviewed": true
+    },
+    "গাজীপুি": {
+      "code": "BD3033",
+      "votes": 1003,
+      "total": 1003,
+      "share": 1.0,
+      "similarity": 0.857,
+      "alternatives": {},
+      "example": "গাজীপুি",
+      "reviewed": true
+    },
+    "বগাপালগঞ্জ": {
+      "code": "BD3035",
+      "votes": 1648,
+      "total": 1648,
+      "share": 1.0,
+      "similarity": 0.923,
+      "alternatives": {},
+      "example": "বগাপালগঞ্জ",
+      "reviewed": true
+    },
+    "রকমািগঞ্জ": {
+      "code": "BD3048",
+      "votes": 624,
+      "total": 624,
+      "share": 1.0,
+      "similarity": 0.667,
+      "alternatives": {},
+      "example": "রকম ািগঞ্জ",
+      "reviewed": true
+    },
+    "াদািীপুি": {
+      "code": "BD3054",
+      "votes": 1453,
+      "total": 1453,
+      "share": 1.0,
+      "similarity": 0.706,
+      "alternatives": {},
+      "example": "াদািীপুি",
+      "reviewed": true
+    },
+    "ারনকগঞ্জ": {
+      "code": "BD3056",
+      "votes": 1599,
+      "total": 1599,
+      "share": 1.0,
+      "similarity": 0.833,
+      "alternatives": {},
+      "example": "ারনকগঞ্জ",
+      "reviewed": true
+    },
+    "মুরিরগঞ্জ": {
+      "code": "BD3059",
+      "votes": 1217,
+      "total": 1217,
+      "share": 1.0,
+      "similarity": 0.667,
+      "alternatives": {},
+      "example": "মুরিরগঞ্জ",
+      "reviewed": true
+    },
+    "নািায়ণগঞ্জ": {
+      "code": "BD3067",
+      "votes": 1599,
+      "total": 1599,
+      "share": 1.0,
+      "similarity": 0.923,
+      "alternatives": {},
+      "example": "নািায়ণগঞ্জ",
+      "reviewed": true
+    },
+    "নিরসিংদী": {
+      "code": "BD3068",
+      "votes": 1599,
+      "total": 1599,
+      "share": 1.0,
+      "similarity": 1.0,
+      "alternatives": {},
+      "example": "নিরসিংদী",
+      "reviewed": true
+    },
+    "িাজোড়ী": {
+      "code": "BD3082",
+      "votes": 1149,
+      "total": 1149,
+      "share": 1.0,
+      "similarity": 0.667,
+      "alternatives": {},
+      "example": "িাজোড়ী",
+      "reviewed": true
+    },
+    "িীয়তপুি": {
+      "code": "BD3086",
+      "votes": 610,
+      "total": 610,
+      "share": 1.0,
+      "similarity": 0.706,
+      "alternatives": {},
+      "example": "িীয়তপুি",
+      "reviewed": true
+    },
+    "টাঙ্গাইল": {
+      "code": "BD3093",
+      "votes": 1648,
+      "total": 1648,
+      "share": 1.0,
+      "similarity": 1.0,
+      "alternatives": {},
+      "example": "টাঙ্গাইল",
+      "reviewed": true
+    },
+    "য়নরসিংহ": {
+      "code": "BD4561",
+      "votes": 1599,
+      "total": 1599,
+      "share": 1.0,
+      "similarity": 0.824,
+      "alternatives": {},
+      "example": "য় নরসিংহ",
+      "reviewed": true
+    },
+    "জাালপুি": {
+      "code": "BD4539",
+      "votes": 1003,
+      "total": 1003,
+      "share": 1.0,
+      "similarity": 0.8,
+      "alternatives": {},
+      "example": "জা ালপুি",
+      "reviewed": true
+    },
+    "বিপুি": {
+      "code": "BD4589",
+      "votes": 610,
+      "total": 610,
+      "share": 1.0,
+      "similarity": 0.364,
+      "alternatives": {},
+      "example": "ব িপুি",
+      "reviewed": true
+    },
+    "বনত্রমকানা": {
+      "code": "BD4572",
+      "votes": 1648,
+      "total": 1648,
+      "share": 1.0,
+      "similarity": 0.833,
+      "alternatives": {},
+      "example": "বনত্রমকানা",
+      "reviewed": true
+    },
+    "চট্টগ্রা": {
+      "code": "BD2015",
+      "votes": 1648,
+      "total": 1648,
+      "share": 1.0,
+      "similarity": 0.941,
+      "alternatives": {},
+      "example": "চট্টগ্রা",
+      "reviewed": true
+    },
+    "কক্সোজাি": {
+      "code": "BD2022",
+      "votes": 1149,
+      "total": 1149,
+      "share": 1.0,
+      "similarity": 0.8,
+      "alternatives": {},
+      "example": "কক্সোজাি",
+      "reviewed": true
+    },
+    "িাঙ্গাাটি": {
+      "code": "BD2084",
+      "votes": 1599,
+      "total": 1599,
+      "share": 1.0,
+      "similarity": 0.842,
+      "alternatives": {},
+      "example": "িাঙ্গা াটি",
+      "reviewed": true
+    },
+    "খাগড়াছরড়": {
+      "code": "BD2046",
+      "votes": 1599,
+      "total": 1599,
+      "share": 1.0,
+      "similarity": 0.909,
+      "alternatives": {},
+      "example": "খাগড়াছরড়",
+      "reviewed": true
+    },
+    "োন্দিোন": {
+      "code": "BD2003",
+      "votes": 1599,
+      "total": 1599,
+      "share": 1.0,
+      "similarity": 0.667,
+      "alternatives": {},
+      "example": "োন্দিোন",
+      "reviewed": true
+    },
+    "বফনী": {
+      "code": "BD2030",
+      "votes": 1648,
+      "total": 1648,
+      "share": 1.0,
+      "similarity": 0.8,
+      "alternatives": {},
+      "example": "বফনী",
+      "reviewed": true
+    },
+    "কুরল্লা": {
+      "code": "BD2019",
+      "votes": 1599,
+      "total": 1599,
+      "share": 1.0,
+      "similarity": 0.8,
+      "alternatives": {},
+      "example": "কুর ল্লা",
+      "reviewed": true
+    },
+    "চাঁদপুি": {
+      "code": "BD2013",
+      "votes": 1453,
+      "total": 1453,
+      "share": 1.0,
+      "similarity": 0.857,
+      "alternatives": {},
+      "example": "চাঁদপুি",
+      "reviewed": true
+    },
+    "লক্ষীপুি": {
+      "code": "BD2051",
+      "votes": 1453,
+      "total": 1453,
+      "share": 1.0,
+      "similarity": 0.8,
+      "alternatives": {},
+      "example": "লক্ষীপুি",
+      "reviewed": true
+    },
+    "বনায়াখালী": {
+      "code": "BD2075",
+      "votes": 1648,
+      "total": 1648,
+      "share": 1.0,
+      "similarity": 0.889,
+      "alternatives": {},
+      "example": "বনায়াখালী",
+      "reviewed": true
+    },
+    "ব্রাহ্মনোরড়য়া": {
+      "code": "BD2012",
+      "votes": 1599,
+      "total": 1599,
+      "share": 1.0,
+      "similarity": 0.774,
+      "alternatives": {},
+      "example": "ব্রাহ্মনোরড়য়া",
+      "reviewed": true
+    },
+    "খুলনা": {
+      "code": "BD4047",
+      "votes": 1502,
+      "total": 1502,
+      "share": 1.0,
+      "similarity": 1.0,
+      "alternatives": {},
+      "example": "খুলনা",
+      "reviewed": true
+    },
+    "োমগিহাট": {
+      "code": "BD4001",
+      "votes": 1599,
+      "total": 1599,
+      "share": 1.0,
+      "similarity": 0.667,
+      "alternatives": {},
+      "example": "োমগিহাট",
+      "reviewed": true
+    },
+    "সাতক্ষীিা": {
+      "code": "BD4087",
+      "votes": 1599,
+      "total": 1599,
+      "share": 1.0,
+      "similarity": 0.889,
+      "alternatives": {},
+      "example": "সাতক্ষীিা",
+      "reviewed": true
+    },
+    "যমাি": {
+      "code": "BD4041",
+      "votes": 624,
+      "total": 624,
+      "share": 1.0,
+      "similarity": 0.4,
+      "alternatives": {},
+      "example": "যম াি",
+      "reviewed": true
+    },
+    "রিনাইদহ": {
+      "code": "BD4044",
+      "votes": 1599,
+      "total": 1599,
+      "share": 1.0,
+      "similarity": 0.857,
+      "alternatives": {},
+      "example": "রিনাইদহ",
+      "reviewed": true
+    },
+    "াগুিা": {
+      "code": "BD4055",
+      "votes": 1599,
+      "total": 1599,
+      "share": 1.0,
+      "similarity": 0.727,
+      "alternatives": {},
+      "example": "াগুিা",
+      "reviewed": true
+    },
+    "নড়াইল": {
+      "code": "BD4065",
+      "votes": 1648,
+      "total": 1648,
+      "share": 1.0,
+      "similarity": 1.0,
+      "alternatives": {},
+      "example": "নড়াইল",
+      "reviewed": true
+    },
+    "কুরিয়া": {
+      "code": "BD4050",
+      "votes": 1599,
+      "total": 1599,
+      "share": 1.0,
+      "similarity": 0.75,
+      "alternatives": {},
+      "example": "কুরিয়া",
+      "reviewed": true
+    },
+    "চুয়ািাঙ্গা": {
+      "code": "BD4018",
+      "votes": 1502,
+      "total": 1502,
+      "share": 1.0,
+      "similarity": 0.909,
+      "alternatives": {},
+      "example": "চুয়ািাঙ্গা",
+      "reviewed": true
+    },
+    "বমহিপুি": {
+      "code": "BD4057",
+      "votes": 1453,
+      "total": 1453,
+      "share": 1.0,
+      "similarity": 0.667,
+      "alternatives": {},
+      "example": "ব মহিপুি",
+      "reviewed": true
+    },
+    "িাজাহী": {
+      "code": "BD5081",
+      "votes": 624,
+      "total": 624,
+      "share": 1.0,
+      "similarity": 0.769,
+      "alternatives": {},
+      "example": "িাজ াহী",
+      "reviewed": true
+    },
+    "চাপাইনোেগঞ্জ": {
+      "code": "BD5070",
+      "votes": 1648,
+      "total": 1648,
+      "share": 1.0,
+      "similarity": 0.875,
+      "alternatives": {},
+      "example": "চাপাইনোেগঞ্জ",
+      "reviewed": true
+    },
+    "নওগাঁ": {
+      "code": "BD5064",
+      "votes": 1648,
+      "total": 1648,
+      "share": 1.0,
+      "similarity": 1.0,
+      "alternatives": {},
+      "example": "নওগাঁ",
+      "reviewed": true
+    },
+    "নামটাি": {
+      "code": "BD5069",
+      "votes": 1599,
+      "total": 1599,
+      "share": 1.0,
+      "similarity": 0.667,
+      "alternatives": {},
+      "example": "নামটাি",
+      "reviewed": true
+    },
+    "জয়পুিহাট": {
+      "code": "BD5038",
+      "votes": 1003,
+      "total": 1003,
+      "share": 1.0,
+      "similarity": 0.909,
+      "alternatives": {},
+      "example": "জয়পুিহাট",
+      "reviewed": true
+    },
+    "েগুড়া": {
+      "code": "BD5010",
+      "votes": 1648,
+      "total": 1648,
+      "share": 1.0,
+      "similarity": 0.833,
+      "alternatives": {},
+      "example": "েগুড়া",
+      "reviewed": true
+    },
+    "রসিাজগঞ্জ": {
+      "code": "BD5088",
+      "votes": 1149,
+      "total": 1149,
+      "share": 1.0,
+      "similarity": 0.889,
+      "alternatives": {},
+      "example": "রসিাজগঞ্জ",
+      "reviewed": true
+    },
+    "পােনা": {
+      "code": "BD5076",
+      "votes": 1648,
+      "total": 1648,
+      "share": 1.0,
+      "similarity": 0.8,
+      "alternatives": {},
+      "example": "পােনা",
+      "reviewed": true
+    },
+    "িিংপুি": {
+      "code": "BD5585",
+      "votes": 1453,
+      "total": 1453,
+      "share": 1.0,
+      "similarity": 0.545,
+      "alternatives": {},
+      "example": "িিংপুি",
+      "reviewed": true
+    },
+    "লালরনিহাট": {
+      "code": "BD5552",
+      "votes": 1599,
+      "total": 1599,
+      "share": 1.0,
+      "similarity": 0.842,
+      "alternatives": {},
+      "example": "লাল রনিহাট",
+      "reviewed": true
+    },
+    "কুরড়গ্রা": {
+      "code": "BD5549",
+      "votes": 1599,
+      "total": 1599,
+      "share": 1.0,
+      "similarity": 0.842,
+      "alternatives": {},
+      "example": "কুরড়গ্রা",
+      "reviewed": true
+    },
+    "নীলফাািী": {
+      "code": "BD5573",
+      "votes": 1599,
+      "total": 1599,
+      "share": 1.0,
+      "similarity": 0.824,
+      "alternatives": {},
+      "example": "নীলফা ািী",
+      "reviewed": true
+    },
+    "রদনাজপুি": {
+      "code": "BD5527",
+      "votes": 1003,
+      "total": 1003,
+      "share": 1.0,
+      "similarity": 0.8,
+      "alternatives": {},
+      "example": "রদনাজপুি",
+      "reviewed": true
+    },
+    "গাইোন্ধা": {
+      "code": "BD5532",
+      "votes": 1648,
+      "total": 1648,
+      "share": 1.0,
+      "similarity": 0.889,
+      "alternatives": {},
+      "example": "গাইোন্ধা",
+      "reviewed": true
+    },
+    "ঠাকুিগাঁও": {
+      "code": "BD5594",
+      "votes": 1599,
+      "total": 1599,
+      "share": 1.0,
+      "similarity": 0.889,
+      "alternatives": {},
+      "example": "ঠাকুিগাঁও",
+      "reviewed": true
+    },
+    "পঞ্চগড়": {
+      "code": "BD5577",
+      "votes": 1648,
+      "total": 1648,
+      "share": 1.0,
+      "similarity": 1.0,
+      "alternatives": {},
+      "example": "পঞ্চগড়",
+      "reviewed": true
+    },
+    "েরিাল": {
+      "code": "BD1006",
+      "votes": 624,
+      "total": 624,
+      "share": 1.0,
+      "similarity": 0.727,
+      "alternatives": {},
+      "example": "েরি াল",
+      "reviewed": true
+    },
+    "পটুয়াখালী": {
+      "code": "BD1078",
+      "votes": 1502,
+      "total": 1502,
+      "share": 1.0,
+      "similarity": 1.0,
+      "alternatives": {},
+      "example": "পটুয়াখালী",
+      "reviewed": true
+    },
+    "বভালা": {
+      "code": "BD1009",
+      "votes": 1648,
+      "total": 1648,
+      "share": 1.0,
+      "similarity": 0.8,
+      "alternatives": {},
+      "example": "বভালা",
+      "reviewed": true
+    },
+    "রপমিাজপুি": {
+      "code": "BD1079",
+      "votes": 1003,
+      "total": 1003,
+      "share": 1.0,
+      "similarity": 0.6,
+      "alternatives": {},
+      "example": "রপমিাজপুি",
+      "reviewed": true
+    },
+    "েিগুনা": {
+      "code": "BD1004",
+      "votes": 1599,
+      "total": 1599,
+      "share": 1.0,
+      "similarity": 0.667,
+      "alternatives": {},
+      "example": "েিগুনা",
+      "reviewed": true
+    },
+    "িালকাঠি": {
+      "code": "BD1042",
+      "votes": 1648,
+      "total": 1648,
+      "share": 1.0,
+      "similarity": 0.857,
+      "alternatives": {},
+      "example": "িালকাঠি",
+      "reviewed": true
+    },
+    "রসমলট": {
+      "code": "BD6091",
+      "votes": 1599,
+      "total": 1599,
+      "share": 1.0,
+      "similarity": 0.75,
+      "alternatives": {},
+      "example": "রসমলট",
+      "reviewed": true
+    },
+    "সুনাগঞ্জ": {
+      "code": "BD6090",
+      "votes": 1502,
+      "total": 1502,
+      "share": 1.0,
+      "similarity": 0.941,
+      "alternatives": {},
+      "example": "সুনা গঞ্জ",
+      "reviewed": true
+    },
+    "হরেগঞ্জ": {
+      "code": "BD6036",
+      "votes": 1599,
+      "total": 1599,
+      "share": 1.0,
+      "similarity": 0.8,
+      "alternatives": {},
+      "example": "হরেগঞ্জ",
+      "reviewed": true
+    },
+    "বৌলভীোজাি": {
+      "code": "BD6058",
+      "votes": 1149,
+      "total": 1149,
+      "share": 1.0,
+      "similarity": 0.632,
+      "alternatives": {},
+      "example": "ব ৌলভীোজাি",
+      "reviewed": true
+    },
+    "ফতরদপুর": {
+      "code": "BD3029",
+      "votes": 49,
+      "total": 49,
+      "share": 1.0,
+      "similarity": 0.909,
+      "alternatives": {},
+      "example": "ফতরদপুর",
+      "reviewed": true
+    },
+    "গাজীপুর": {
+      "code": "BD3033",
+      "votes": 49,
+      "total": 49,
+      "share": 1.0,
+      "similarity": 1.0,
+      "alternatives": {},
+      "example": "গাজীপুর",
+      "reviewed": true
+    },
+    "তকমারগঞ্জ": {
+      "code": "BD3048",
+      "votes": 49,
+      "total": 49,
+      "share": 1.0,
+      "similarity": 0.769,
+      "alternatives": {},
+      "example": "তকম ারগঞ্জ",
+      "reviewed": true
+    },
+    "াদারীপুর": {
+      "code": "BD3054",
+      "votes": 49,
+      "total": 49,
+      "share": 1.0,
+      "similarity": 0.941,
+      "alternatives": {},
+      "example": "াদারীপুর",
+      "reviewed": true
+    },
+    "াতনকগঞ্জ": {
+      "code": "BD3056",
+      "votes": 49,
+      "total": 49,
+      "share": 1.0,
+      "similarity": 0.833,
+      "alternatives": {},
+      "example": "াতনকগঞ্জ",
+      "reviewed": true
+    },
+    "মুতিতগঞ্জ": {
+      "code": "BD3059",
+      "votes": 49,
+      "total": 49,
+      "share": 1.0,
+      "similarity": 0.667,
+      "alternatives": {},
+      "example": "মুতিতগঞ্জ",
+      "reviewed": true
+    },
+    "নারায়ণগঞ্জ": {
+      "code": "BD3067",
+      "votes": 49,
+      "total": 49,
+      "share": 1.0,
+      "similarity": 1.0,
+      "alternatives": {},
+      "example": "নারায়ণগঞ্জ",
+      "reviewed": true
+    },
+    "নরতসিংদী": {
+      "code": "BD3068",
+      "votes": 49,
+      "total": 49,
+      "share": 1.0,
+      "similarity": 0.933,
+      "alternatives": {},
+      "example": "নরতসিংদী",
+      "reviewed": true
+    },
+    "রাজোড়ী": {
+      "code": "BD3082",
+      "votes": 49,
+      "total": 49,
+      "share": 1.0,
+      "similarity": 0.857,
+      "alternatives": {},
+      "example": "রাজোড়ী",
+      "reviewed": true
+    },
+    "রীয়িপুর": {
+      "code": "BD3086",
+      "votes": 49,
+      "total": 49,
+      "share": 1.0,
+      "similarity": 0.824,
+      "alternatives": {},
+      "example": "রীয়িপুর",
+      "reviewed": true
+    },
+    "য়নতসিংহ": {
+      "code": "BD4561",
+      "votes": 49,
+      "total": 49,
+      "share": 1.0,
+      "similarity": 0.824,
+      "alternatives": {},
+      "example": "য় নতসিংহ",
+      "reviewed": true
+    },
+    "জাালপুর": {
+      "code": "BD4539",
+      "votes": 49,
+      "total": 49,
+      "share": 1.0,
+      "similarity": 0.933,
+      "alternatives": {},
+      "example": "জা ালপুর",
+      "reviewed": true
+    },
+    "বরপুর": {
+      "code": "BD4589",
+      "votes": 49,
+      "total": 49,
+      "share": 1.0,
+      "similarity": 0.75,
+      "alternatives": {},
+      "example": "ব রপুর",
+      "reviewed": true
+    },
+    "কক্সোজার": {
+      "code": "BD2022",
+      "votes": 49,
+      "total": 49,
+      "share": 1.0,
+      "similarity": 0.909,
+      "alternatives": {},
+      "example": "কক্সোজার",
+      "reviewed": true
+    },
+    "রাঙ্গাাটি": {
+      "code": "BD2084",
+      "votes": 49,
+      "total": 49,
+      "share": 1.0,
+      "similarity": 0.947,
+      "alternatives": {},
+      "example": "রাঙ্গা াটি",
+      "reviewed": true
+    },
+    "খাগড়াছতড়": {
+      "code": "BD2046",
+      "votes": 49,
+      "total": 49,
+      "share": 1.0,
+      "similarity": 0.909,
+      "alternatives": {},
+      "example": "খাগড়াছতড়",
+      "reviewed": true
+    },
+    "োন্দরোন": {
+      "code": "BD2003",
+      "votes": 49,
+      "total": 49,
+      "share": 1.0,
+      "similarity": 0.8,
+      "alternatives": {},
+      "example": "োন্দরোন",
+      "reviewed": true
+    },
+    "কুতল্লা": {
+      "code": "BD2019",
+      "votes": 49,
+      "total": 49,
+      "share": 1.0,
+      "similarity": 0.8,
+      "alternatives": {},
+      "example": "কুত ল্লা",
+      "reviewed": true
+    },
+    "চাঁদপুর": {
+      "code": "BD2013",
+      "votes": 49,
+      "total": 49,
+      "share": 1.0,
+      "similarity": 1.0,
+      "alternatives": {},
+      "example": "চাঁদপুর",
+      "reviewed": true
+    },
+    "লক্ষীপুর": {
+      "code": "BD2051",
+      "votes": 49,
+      "total": 49,
+      "share": 1.0,
+      "similarity": 0.909,
+      "alternatives": {},
+      "example": "লক্ষীপুর",
+      "reviewed": true
+    },
+    "ব্রাহ্মনোতড়য়া": {
+      "code": "BD2012",
+      "votes": 49,
+      "total": 49,
+      "share": 1.0,
+      "similarity": 0.774,
+      "alternatives": {},
+      "example": "ব্রাহ্মনোতড়য়া",
+      "reviewed": true
+    },
+    "োমগরহাট": {
+      "code": "BD4001",
+      "votes": 49,
+      "total": 49,
+      "share": 1.0,
+      "similarity": 0.8,
+      "alternatives": {},
+      "example": "োমগরহাট",
+      "reviewed": true
+    },
+    "সািক্ষীরা": {
+      "code": "BD4087",
+      "votes": 49,
+      "total": 49,
+      "share": 1.0,
+      "similarity": 0.889,
+      "alternatives": {},
+      "example": "সািক্ষীরা",
+      "reviewed": true
+    },
+    "যমার": {
+      "code": "BD4041",
+      "votes": 49,
+      "total": 49,
+      "share": 1.0,
+      "similarity": 0.667,
+      "alternatives": {},
+      "example": "যম ার",
+      "reviewed": true
+    },
+    "তিনাইদহ": {
+      "code": "BD4044",
+      "votes": 49,
+      "total": 49,
+      "share": 1.0,
+      "similarity": 0.857,
+      "alternatives": {},
+      "example": "তিনাইদহ",
+      "reviewed": true
+    },
+    "াগুরা": {
+      "code": "BD4055",
+      "votes": 49,
+      "total": 49,
+      "share": 1.0,
+      "similarity": 0.909,
+      "alternatives": {},
+      "example": "াগুরা",
+      "reviewed": true
+    },
+    "কুতিয়া": {
+      "code": "BD4050",
+      "votes": 49,
+      "total": 49,
+      "share": 1.0,
+      "similarity": 0.75,
+      "alternatives": {},
+      "example": "কুতিয়া",
+      "reviewed": true
+    },
+    "বমহরপুর": {
+      "code": "BD4057",
+      "votes": 49,
+      "total": 49,
+      "share": 1.0,
+      "similarity": 0.909,
+      "alternatives": {},
+      "example": "ব মহরপুর",
+      "reviewed": true
+    },
+    "রাজাহী": {
+      "code": "BD5081",
+      "votes": 49,
+      "total": 49,
+      "share": 1.0,
+      "similarity": 0.923,
+      "alternatives": {},
+      "example": "রাজ াহী",
+      "reviewed": true
+    },
+    "নামটার": {
+      "code": "BD5069",
+      "votes": 49,
+      "total": 49,
+      "share": 1.0,
+      "similarity": 0.857,
+      "alternatives": {},
+      "example": "নামটার",
+      "reviewed": true
+    },
+    "জয়পুরহাট": {
+      "code": "BD5038",
+      "votes": 49,
+      "total": 49,
+      "share": 1.0,
+      "similarity": 1.0,
+      "alternatives": {},
+      "example": "জয়পুরহাট",
+      "reviewed": true
+    },
+    "তসরাজগঞ্জ": {
+      "code": "BD5088",
+      "votes": 49,
+      "total": 49,
+      "share": 1.0,
+      "similarity": 0.923,
+      "alternatives": {},
+      "example": "তসরাজগঞ্জ",
+      "reviewed": true
+    },
+    "রিংপুর": {
+      "code": "BD5585",
+      "votes": 49,
+      "total": 49,
+      "share": 1.0,
+      "similarity": 1.0,
+      "alternatives": {},
+      "example": "রিংপুর",
+      "reviewed": true
+    },
+    "লালতনরহাট": {
+      "code": "BD5552",
+      "votes": 49,
+      "total": 49,
+      "share": 1.0,
+      "similarity": 0.857,
+      "alternatives": {},
+      "example": "লাল তনরহাট",
+      "reviewed": true
+    },
+    "কুতড়গ্রা": {
+      "code": "BD5549",
+      "votes": 49,
+      "total": 49,
+      "share": 1.0,
+      "similarity": 0.842,
+      "alternatives": {},
+      "example": "কুতড়গ্রা",
+      "reviewed": true
+    },
+    "নীলফাারী": {
+      "code": "BD5573",
+      "votes": 49,
+      "total": 49,
+      "share": 1.0,
+      "similarity": 0.941,
+      "alternatives": {},
+      "example": "নীলফা ারী",
+      "reviewed": true
+    },
+    "তদনাজপুর": {
+      "code": "BD5527",
+      "votes": 49,
+      "total": 49,
+      "share": 1.0,
+      "similarity": 0.909,
+      "alternatives": {},
+      "example": "তদনাজপুর",
+      "reviewed": true
+    },
+    "ঠাকুরগাঁও": {
+      "code": "BD5594",
+      "votes": 49,
+      "total": 49,
+      "share": 1.0,
+      "similarity": 1.0,
+      "alternatives": {},
+      "example": "ঠাকুরগাঁও",
+      "reviewed": true
+    },
+    "েতরাল": {
+      "code": "BD1006",
+      "votes": 49,
+      "total": 49,
+      "share": 1.0,
+      "similarity": 0.571,
+      "alternatives": {},
+      "example": "েতর াল",
+      "reviewed": true
+    },
+    "তপমরাজপুর": {
+      "code": "BD1079",
+      "votes": 49,
+      "total": 49,
+      "share": 1.0,
+      "similarity": 0.833,
+      "alternatives": {},
+      "example": "তপমরাজপুর",
+      "reviewed": true
+    },
+    "েরগুনা": {
+      "code": "BD1004",
+      "votes": 49,
+      "total": 49,
+      "share": 1.0,
+      "similarity": 0.857,
+      "alternatives": {},
+      "example": "েরগুনা",
+      "reviewed": true
+    },
+    "তসমলট": {
+      "code": "BD6091",
+      "votes": 49,
+      "total": 49,
+      "share": 1.0,
+      "similarity": 0.75,
+      "alternatives": {},
+      "example": "তসমলট",
+      "reviewed": true
+    },
+    "হতেগঞ্জ": {
+      "code": "BD6036",
+      "votes": 49,
+      "total": 49,
+      "share": 1.0,
+      "similarity": 0.8,
+      "alternatives": {},
+      "example": "হতেগঞ্জ",
+      "reviewed": true
+    },
+    "বৌলভীোজার": {
+      "code": "BD6058",
+      "votes": 49,
+      "total": 49,
+      "share": 1.0,
+      "similarity": 0.737,
+      "alternatives": {},
+      "example": "ব ৌলভীোজার",
+      "reviewed": true
+    },
+    "রকমশািগঞ্জ": {
+      "code": "BD3048",
+      "votes": 525,
+      "total": 525,
+      "share": 1.0,
+      "similarity": 0.615,
+      "alternatives": {},
+      "example": "রকমশািগঞ্জ",
+      "reviewed": true
+    },
+    "শিীয়তপুি": {
+      "code": "BD3086",
+      "votes": 393,
+      "total": 393,
+      "share": 1.0,
+      "similarity": 0.8,
+      "alternatives": {},
+      "example": "শিীয়তপুি",
+      "reviewed": true
+    },
+    "বশিপুি": {
+      "code": "BD4589",
+      "votes": 393,
+      "total": 393,
+      "share": 1.0,
+      "similarity": 0.571,
+      "alternatives": {},
+      "example": "বশিপুি",
+      "reviewed": true
+    },
+    "যমশাি": {
+      "code": "BD4041",
+      "votes": 525,
+      "total": 525,
+      "share": 1.0,
+      "similarity": 0.667,
+      "alternatives": {},
+      "example": "যমশাি",
+      "reviewed": true
+    },
+    "িাজশাহী": {
+      "code": "BD5081",
+      "votes": 525,
+      "total": 525,
+      "share": 1.0,
+      "similarity": 0.857,
+      "alternatives": {},
+      "example": "িাজশাহী",
+      "reviewed": true
+    },
+    "েরিশাল": {
+      "code": "BD1006",
+      "votes": 525,
+      "total": 525,
+      "share": 1.0,
+      "similarity": 0.857,
+      "alternatives": {},
+      "example": "েরিশাল",
+      "reviewed": true
+    },
+    "গািীপুি": {
+      "code": "BD3033",
+      "votes": 450,
+      "total": 450,
+      "share": 1.0,
+      "similarity": 0.714,
+      "alternatives": {},
+      "example": "গািীপুি",
+      "reviewed": true
+    },
+    "রকমোিগঞ্জ": {
+      "code": "BD3048",
+      "votes": 450,
+      "total": 450,
+      "share": 1.0,
+      "similarity": 0.667,
+      "alternatives": {},
+      "example": "রকমোিগঞ্জ",
+      "reviewed": true
+    },
+    "িািোড়ী": {
+      "code": "BD3082",
+      "votes": 450,
+      "total": 450,
+      "share": 1.0,
+      "similarity": 0.533,
+      "alternatives": {},
+      "example": "িািোড়ী",
+      "reviewed": true
+    },
+    "েিীয়তপুি": {
+      "code": "BD3086",
+      "votes": 450,
+      "total": 450,
+      "share": 1.0,
+      "similarity": 0.667,
+      "alternatives": {},
+      "example": "েিীয়তপুি",
+      "reviewed": true
+    },
+    "িাালপুি": {
+      "code": "BD4539",
+      "votes": 450,
+      "total": 450,
+      "share": 1.0,
+      "similarity": 0.667,
+      "alternatives": {},
+      "example": "িা ালপুি",
+      "reviewed": true
+    },
+    "বেিপুি": {
+      "code": "BD4589",
+      "votes": 450,
+      "total": 450,
+      "share": 1.0,
+      "similarity": 0.5,
+      "alternatives": {},
+      "example": "বেিপুি",
+      "reviewed": true
+    },
+    "কক্সোিাি": {
+      "code": "BD2022",
+      "votes": 450,
+      "total": 450,
+      "share": 1.0,
+      "similarity": 0.667,
+      "alternatives": {},
+      "example": "কক্সোিাি",
+      "reviewed": true
+    },
+    "যমোি": {
+      "code": "BD4041",
+      "votes": 450,
+      "total": 450,
+      "share": 1.0,
+      "similarity": 0.5,
+      "alternatives": {},
+      "example": "যমোি",
+      "reviewed": true
+    },
+    "িািোহী": {
+      "code": "BD5081",
+      "votes": 450,
+      "total": 450,
+      "share": 1.0,
+      "similarity": 0.462,
+      "alternatives": {},
+      "example": "িািোহী",
+      "reviewed": true
+    },
+    "িয়পুিহাট": {
+      "code": "BD5038",
+      "votes": 450,
+      "total": 450,
+      "share": 1.0,
+      "similarity": 0.8,
+      "alternatives": {},
+      "example": "িয়পুিহাট",
+      "reviewed": true
+    },
+    "রসিািগঞ্জ": {
+      "code": "BD5088",
+      "votes": 450,
+      "total": 450,
+      "share": 1.0,
+      "similarity": 0.778,
+      "alternatives": {},
+      "example": "রসিািগঞ্জ",
+      "reviewed": true
+    },
+    "রদনািপুি": {
+      "code": "BD5527",
+      "votes": 450,
+      "total": 450,
+      "share": 1.0,
+      "similarity": 0.667,
+      "alternatives": {},
+      "example": "রদনািপুি",
+      "reviewed": true
+    },
+    "েরিোল": {
+      "code": "BD1006",
+      "votes": 450,
+      "total": 450,
+      "share": 1.0,
+      "similarity": 0.667,
+      "alternatives": {},
+      "example": "েরিোল",
+      "reviewed": true
+    },
+    "রপমিািপুি": {
+      "code": "BD1079",
+      "votes": 450,
+      "total": 450,
+      "share": 1.0,
+      "similarity": 0.444,
+      "alternatives": {},
+      "example": "রপমিািপুি",
+      "reviewed": true
+    },
+    "বৌলভীোিাি": {
+      "code": "BD6058",
+      "votes": 450,
+      "total": 450,
+      "share": 1.0,
+      "similarity": 0.526,
+      "alternatives": {},
+      "example": "ব ৌলভীোিাি",
+      "reviewed": true
+    },
+    "ফরিদপযি": {
+      "code": "BD3029",
+      "votes": 146,
+      "total": 146,
+      "share": 1.0,
+      "similarity": 0.8,
+      "alternatives": {},
+      "example": "ফরিদপযি",
+      "reviewed": true,
+      "reviewed_by": "Claude Code 2026-10-12 (u->ya glyph variant, checked by eye)"
+    },
+    "গাজীপযি": {
+      "code": "BD3033",
+      "votes": 146,
+      "total": 146,
+      "share": 1.0,
+      "similarity": 0.75,
+      "alternatives": {},
+      "example": "গাজীপযি",
+      "reviewed": true,
+      "reviewed_by": "Claude Code 2026-10-12 (u->ya glyph variant, checked by eye)"
+    },
+    "াদািীপযি": {
+      "code": "BD3054",
+      "votes": 146,
+      "total": 146,
+      "share": 1.0,
+      "similarity": 0.588,
+      "alternatives": {},
+      "example": "াদািীপযি",
+      "reviewed": true,
+      "reviewed_by": "Claude Code 2026-10-12 (u->ya glyph variant, checked by eye)"
+    },
+    "যরিরগঞ্জ": {
+      "code": "BD3059",
+      "votes": 65,
+      "total": 65,
+      "share": 1.0,
+      "similarity": 0.5,
+      "alternatives": {},
+      "example": "যরিরগঞ্জ",
+      "reviewed": true,
+      "reviewed_by": "Claude Code 2026-10-12 (u->ya glyph variant, checked by eye)"
+    },
+    "শিীয়তপযি": {
+      "code": "BD3086",
+      "votes": 132,
+      "total": 132,
+      "share": 1.0,
+      "similarity": 0.727,
+      "alternatives": {},
+      "example": "শিীয়তপযি",
+      "reviewed": true,
+      "reviewed_by": "Claude Code 2026-10-12 (u->ya glyph variant, checked by eye)"
+    },
+    "জাালপযি": {
+      "code": "BD4539",
+      "votes": 146,
+      "total": 146,
+      "share": 1.0,
+      "similarity": 0.667,
+      "alternatives": {},
+      "example": "জা ালপযি",
+      "reviewed": true,
+      "reviewed_by": "Claude Code 2026-10-12 (u->ya glyph variant, checked by eye)"
+    },
+    "বশিপযি": {
+      "code": "BD4589",
+      "votes": 132,
+      "total": 132,
+      "share": 1.0,
+      "similarity": 0.5,
+      "alternatives": {},
+      "example": "বশিপযি",
+      "reviewed": true,
+      "reviewed_by": "Claude Code 2026-10-12 (u->ya glyph variant, checked by eye)"
+    },
+    "চাঁদপযি": {
+      "code": "BD2013",
+      "votes": 146,
+      "total": 146,
+      "share": 1.0,
+      "similarity": 0.75,
+      "alternatives": {},
+      "example": "চাঁদপযি",
+      "reviewed": true,
+      "reviewed_by": "Claude Code 2026-10-12 (u->ya glyph variant, checked by eye)"
+    },
+    "লক্ষীপযি": {
+      "code": "BD2051",
+      "votes": 146,
+      "total": 146,
+      "share": 1.0,
+      "similarity": 0.727,
+      "alternatives": {},
+      "example": "লক্ষীপযি",
+      "reviewed": true,
+      "reviewed_by": "Claude Code 2026-10-12 (u->ya glyph variant, checked by eye)"
+    },
+    "খযলনা": {
+      "code": "BD4047",
+      "votes": 146,
+      "total": 146,
+      "share": 1.0,
+      "similarity": 0.857,
+      "alternatives": {},
+      "example": "খযলনা",
+      "reviewed": true,
+      "reviewed_by": "Claude Code 2026-10-12 (u->ya glyph variant, checked by eye)"
+    },
+    "চযয়ািাঙ্গা": {
+      "code": "BD4018",
+      "votes": 146,
+      "total": 146,
+      "share": 1.0,
+      "similarity": 0.818,
+      "alternatives": {},
+      "example": "চযয়ািাঙ্গা",
+      "reviewed": true,
+      "reviewed_by": "Claude Code 2026-10-12 (u->ya glyph variant, checked by eye)"
+    },
+    "বমহিপযি": {
+      "code": "BD4057",
+      "votes": 146,
+      "total": 146,
+      "share": 1.0,
+      "similarity": 0.6,
+      "alternatives": {},
+      "example": "ব মহিপযি",
+      "reviewed": true,
+      "reviewed_by": "Claude Code 2026-10-12 (u->ya glyph variant, checked by eye)"
+    },
+    "জয়পযিহাট": {
+      "code": "BD5038",
+      "votes": 146,
+      "total": 146,
+      "share": 1.0,
+      "similarity": 0.833,
+      "alternatives": {},
+      "example": "জয়পযিহাট",
+      "reviewed": true,
+      "reviewed_by": "Claude Code 2026-10-12 (u->ya glyph variant, checked by eye)"
+    },
+    "িিংপযি": {
+      "code": "BD5585",
+      "votes": 146,
+      "total": 146,
+      "share": 1.0,
+      "similarity": 0.4,
+      "alternatives": {},
+      "example": "িিংপযি",
+      "reviewed": true,
+      "reviewed_by": "Claude Code 2026-10-12 (u->ya glyph variant, checked by eye)"
+    },
+    "রদনাজপযি": {
+      "code": "BD5527",
+      "votes": 146,
+      "total": 146,
+      "share": 1.0,
+      "similarity": 0.727,
+      "alternatives": {},
+      "example": "রদনাজপযি",
+      "reviewed": true,
+      "reviewed_by": "Claude Code 2026-10-12 (u->ya glyph variant, checked by eye)"
+    },
+    "পটযয়াখালী": {
+      "code": "BD1078",
+      "votes": 146,
+      "total": 146,
+      "share": 1.0,
+      "similarity": 0.909,
+      "alternatives": {},
+      "example": "পটযয়াখালী",
+      "reviewed": true,
+      "reviewed_by": "Claude Code 2026-10-12 (u->ya glyph variant, checked by eye)"
+    },
+    "রপমিাজপযি": {
+      "code": "BD1079",
+      "votes": 146,
+      "total": 146,
+      "share": 1.0,
+      "similarity": 0.545,
+      "alternatives": {},
+      "example": "রপমিাজপযি",
+      "reviewed": true,
+      "reviewed_by": "Claude Code 2026-10-12 (u->ya glyph variant, checked by eye)"
+    },
+    "সযনাগঞ্জ": {
+      "code": "BD6090",
+      "votes": 146,
+      "total": 146,
+      "share": 1.0,
+      "similarity": 0.833,
+      "alternatives": {},
+      "example": "সযনা গঞ্জ",
+      "reviewed": true,
+      "reviewed_by": "Claude Code 2026-10-12 (u->ya glyph variant, checked by eye)"
+    },
+    "মুরিগঞ্জ": {
+      "code": "BD3059",
+      "votes": 236,
+      "total": 236,
+      "share": 1.0,
+      "similarity": 0.727,
+      "alternatives": {},
+      "example": "মুরিগঞ্জ",
+      "reviewed": true
+    },
+    "যরিগঞ্জ": {
+      "code": "BD3059",
+      "votes": 81,
+      "total": 81,
+      "share": 1.0,
+      "similarity": 0.545,
+      "alternatives": {},
+      "example": "যরিগঞ্জ",
+      "reviewed": true,
+      "reviewed_by": "Claude Code 2026-10-12 (u->ya glyph variant, checked by eye)"
+    },
+    "িীয়তপযি": {
+      "code": "BD3086",
+      "votes": 14,
+      "total": 14,
+      "share": 1.0,
+      "similarity": 0.6,
+      "alternatives": {},
+      "example": "িীয়তপযি",
+      "reviewed": true,
+      "reviewed_by": "Claude Code 2026-10-12 (u->ya glyph variant, checked by eye)"
+    },
+    "বিপযি": {
+      "code": "BD4589",
+      "votes": 14,
+      "total": 14,
+      "share": 1.0,
+      "similarity": 0.286,
+      "alternatives": {},
+      "example": "ব িপযি",
+      "reviewed": true,
+      "reviewed_by": "Claude Code 2026-10-12 (u->ya glyph variant, checked by eye)"
+    }
+  }
+}

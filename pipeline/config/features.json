@@ -1,0 +1,13 @@
+{
+  "feature_config_version": "1.0",
+  "_note": "Features at origin t use only report dates <= t. Value features are on the log1p scale. Target y_h{h} = admissions on report date t+h (observed only).",
+  "lags": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13],
+  "rolling_windows": [3, 7, 14, 28],
+  "rolling_stats": ["mean", "max", "std"],
+  "growth_windows": [3, 7, 14],
+  "last_year": {"enabled": true, "offset_days": 364, "half_window": 3},
+  "context": {"district": ["division", "national"], "division": ["national"], "national": []},
+  "calendar": ["target_dow", "origin_dow", "target_doy_sin", "target_doy_cos", "target_month", "epi_week", "year"],
+  "min_recent_observed": 4,
+  "categorical": ["unit_code"]
+}

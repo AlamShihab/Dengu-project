@@ -1,0 +1,38 @@
+{
+  "registry_version": "1.0",
+  "_note": "Same 17-model registry as the TFS weather project. Every model learns the target mode set in config.json -> screening.target_mode (default log_ratio: log1p(y[t+h]) - log1p(mean of last 7 days)) and is pooled across all units of one level.",
+  "models": {
+    "LinearRegression":              {"family": "linear",   "library": "sklearn",  "needs_scaling": true,  "enabled": true},
+    "Ridge":                         {"family": "linear",   "library": "sklearn",  "needs_scaling": true,  "enabled": true},
+    "Lasso":                         {"family": "linear",   "library": "sklearn",  "needs_scaling": true,  "enabled": true},
+    "ElasticNet":                    {"family": "linear",   "library": "sklearn",  "needs_scaling": true,  "enabled": true},
+    "HuberRegressor":                {"family": "linear",   "library": "sklearn",  "needs_scaling": true,  "enabled": true},
+    "KNNRegressor":                  {"family": "neighbor", "library": "sklearn",  "needs_scaling": true,  "enabled": true, "slow": true},
+    "SVR":                           {"family": "kernel",   "library": "sklearn",  "needs_scaling": true,  "enabled": true, "slow": true, "max_rows": 12000},
+    "DecisionTreeRegressor":         {"family": "tree",     "library": "sklearn",  "needs_scaling": false, "enabled": true},
+    "RandomForestRegressor":         {"family": "ensemble", "library": "sklearn",  "needs_scaling": false, "enabled": true, "slow": true},
+    "ExtraTreesRegressor":           {"family": "ensemble", "library": "sklearn",  "needs_scaling": false, "enabled": true, "slow": true},
+    "AdaBoostRegressor":             {"family": "boosting", "library": "sklearn",  "needs_scaling": false, "enabled": true, "slow": true},
+    "GradientBoostingRegressor":     {"family": "boosting", "library": "sklearn",  "needs_scaling": false, "enabled": true, "slow": true},
+    "HistGradientBoostingRegressor": {"family": "boosting", "library": "sklearn",  "needs_scaling": false, "enabled": true, "handles_missing": true},
+    "XGBoost":                       {"family": "boosting", "library": "xgboost",  "needs_scaling": false, "enabled": true, "handles_missing": true},
+    "LightGBM":                      {"family": "boosting", "library": "lightgbm", "needs_scaling": false, "enabled": true, "handles_missing": true},
+    "CatBoost":                      {"family": "boosting", "library": "catboost", "needs_scaling": false, "enabled": true, "handles_missing": true},
+    "MLPRegressor":                  {"family": "neural",   "library": "sklearn",  "needs_scaling": true,  "enabled": true, "slow": true}
+  },
+  "baselines": ["Persistence", "Mean7", "SameWeekdayLastWeek", "Drift7"],
+  "preprocessing": {
+    "screening_profiles": {
+      "P1_median_none_standard": {"imputation": "median", "outliers": "none",      "scaling": "standard"},
+      "P4_median_winsor_robust": {"imputation": "median", "outliers": "winsorize", "scaling": "robust"},
+      "P5_median_none_none":     {"imputation": "median", "outliers": "none",      "scaling": "none"},
+      "P6_native_none_none":     {"imputation": "none",   "outliers": "none",      "scaling": "none"}
+    },
+    "tree_models_exclude_features": ["year"],
+    "compatibility_rules": {
+      "scaled_models": ["P1_median_none_standard", "P4_median_winsor_robust"],
+      "tree_models": ["P5_median_none_none"],
+      "native_missing_models": ["P5_median_none_none", "P6_native_none_none"]
+    }
+  }
+}

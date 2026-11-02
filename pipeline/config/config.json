@@ -1,0 +1,106 @@
+{
+  "project": {
+    "name": "Dengue Forecasting System",
+    "short_name": "DFS",
+    "version": "1.0.0",
+    "owner": "Shihab (Ash)",
+    "timezone": "Asia/Dhaka",
+    "description": "Daily dengue hospital-admission forecasts (Day 1-7) for Bangladesh divisions and districts"
+  },
+  "random_seed": 42,
+  "forecast_horizons": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "levels": [
+    "district",
+    "division",
+    "national"
+  ],
+  "primary_metric": "MAE",
+  "columns": {
+    "date": "report_date",
+    "unit": "unit_code",
+    "target": "admitted_24h"
+  },
+  "target": {
+    "name": "admitted_24h",
+    "label": "New dengue hospital admissions (last 24 h)",
+    "unit_label": "admissions",
+    "geography_basis": "hospital location (where the patient was admitted), as reported by DGHS"
+  },
+  "source": {
+    "name": "DGHS Daily Dengue Press Release (Health Emergency Operation Center & Control Room)",
+    "pdf_url_template": "https://dashboard.dghs.gov.bd/osource/images/docs/vpr/{yyyymmdd}_dengue_all.pdf",
+    "index_url": "https://dghs.gov.bd/pages/static-pages/dengue-press-release-gxrgtg-6a9eb4cc7a024513d1b8c896",
+    "start_date": "2021-12-13",
+    "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0 Safari/537.36 DFS-research",
+    "request_delay_seconds": 0.75,
+    "timeout_seconds": 90,
+    "max_retries": 3,
+    "recheck_missing_days": 60
+  },
+  "data": {
+    "first_model_date": "2022-01-01",
+    "max_plausible_daily_admissions": 6000,
+    "max_plausible_unit_admissions": 3000,
+    "cumulative_tolerance": 2,
+    "jump_ratio_warning": 8.0,
+    "jump_min_count": 30,
+    "stuck_run_days": 10,
+    "stuck_min_value": 5
+  },
+  "preparation": {
+    "min_observed_days": 365,
+    "min_recent_observed_days": 14,
+    "recent_window_days": 28
+  },
+  "split": {
+    "method": "date",
+    "development_start_origin": "2022-01-29",
+    "development_end_origin": "2025-06-23",
+    "test_start_origin": "2025-07-01",
+    "test_end_origin": null,
+    "embargo_days": 7
+  },
+  "cv": {
+    "folds": 4,
+    "validation_days": 182,
+    "gap_days": 7,
+    "last_validation_end": "2025-06-23"
+  },
+  "screening": {
+    "top_models_for_tuning": 4,
+    "max_train_rows": 200000,
+    "slow_model_max_rows": 60000,
+    "target_mode": "log_ratio"
+  },
+  "final": {
+    "max_rows_per_model": 300000,
+    "promotion_rule": "ML model deployed only if it beats the best baseline on the CV folds used for model selection (the last tuning.budget.last_folds folds) and on the test period; otherwise the best baseline is deployed"
+  },
+  "intervals": {
+    "coverage": 0.8,
+    "method": "CV out-of-fold residual quantiles on the log1p scale, by horizon and forecast-size band",
+    "size_bands": [
+      0,
+      2,
+      10,
+      50,
+      200
+    ]
+  },
+  "forecast": {
+    "stale_data_days": 3,
+    "history_days": 60,
+    "low_confidence_recent_missing": 3
+  },
+  "app": {
+    "port": 5001
+  }
+}

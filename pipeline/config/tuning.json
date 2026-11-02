@@ -1,0 +1,355 @@
+{
+  "optimization": {
+    "method": "optuna",
+    "sampler": "TPE",
+    "trials": 20,
+    "metric": "MAE",
+    "direction": "minimize",
+    "timeout_seconds": 120,
+    "startup_trials": 6,
+    "model_n_jobs": 8
+  },
+  "budget": {
+    "_note": "Per study: stops at 'trials' or 'timeout_seconds'. CV on the last 'last_folds' folds. Final models (Day 9) use all development data.",
+    "last_folds": 3,
+    "max_train_rows": 150000,
+    "max_rows_slow_models": 40000
+  },
+  "search_spaces": {
+    "Ridge": {
+      "alpha": [
+        "float_log",
+        0.0001,
+        100.0
+      ]
+    },
+    "Lasso": {
+      "alpha": [
+        "float_log",
+        1e-05,
+        1.0
+      ]
+    },
+    "ElasticNet": {
+      "alpha": [
+        "float_log",
+        1e-05,
+        1.0
+      ],
+      "l1_ratio": [
+        "float",
+        0.05,
+        0.95
+      ]
+    },
+    "HuberRegressor": {
+      "epsilon": [
+        "float",
+        1.1,
+        2.5
+      ],
+      "alpha": [
+        "float_log",
+        1e-06,
+        0.1
+      ]
+    },
+    "KNNRegressor": {
+      "n_neighbors": [
+        "int",
+        5,
+        80
+      ],
+      "weights": [
+        "cat",
+        [
+          "uniform",
+          "distance"
+        ]
+      ],
+      "p": [
+        "cat",
+        [
+          1,
+          2
+        ]
+      ]
+    },
+    "SVR": {
+      "C": [
+        "float_log",
+        0.1,
+        30.0
+      ],
+      "epsilon": [
+        "float_log",
+        0.01,
+        0.5
+      ],
+      "gamma": [
+        "cat",
+        [
+          "scale",
+          "auto"
+        ]
+      ]
+    },
+    "DecisionTreeRegressor": {
+      "max_depth": [
+        "int",
+        3,
+        16
+      ],
+      "min_samples_leaf": [
+        "int",
+        5,
+        100
+      ]
+    },
+    "RandomForestRegressor": {
+      "n_estimators": [
+        "int",
+        100,
+        400
+      ],
+      "max_depth": [
+        "int",
+        6,
+        20
+      ],
+      "min_samples_leaf": [
+        "int",
+        5,
+        50
+      ],
+      "max_features": [
+        "cat",
+        [
+          "sqrt",
+          0.5,
+          1.0
+        ]
+      ]
+    },
+    "ExtraTreesRegressor": {
+      "n_estimators": [
+        "int",
+        100,
+        400
+      ],
+      "max_depth": [
+        "int",
+        6,
+        20
+      ],
+      "min_samples_leaf": [
+        "int",
+        5,
+        50
+      ],
+      "max_features": [
+        "cat",
+        [
+          "sqrt",
+          0.5,
+          1.0
+        ]
+      ]
+    },
+    "AdaBoostRegressor": {
+      "n_estimators": [
+        "int",
+        50,
+        300
+      ],
+      "learning_rate": [
+        "float_log",
+        0.01,
+        1.0
+      ],
+      "loss": [
+        "cat",
+        [
+          "linear",
+          "square"
+        ]
+      ]
+    },
+    "GradientBoostingRegressor": {
+      "n_estimators": [
+        "int",
+        100,
+        600
+      ],
+      "learning_rate": [
+        "float_log",
+        0.01,
+        0.3
+      ],
+      "max_depth": [
+        "int",
+        2,
+        7
+      ],
+      "subsample": [
+        "float",
+        0.6,
+        1.0
+      ]
+    },
+    "HistGradientBoostingRegressor": {
+      "max_iter": [
+        "int",
+        100,
+        800
+      ],
+      "learning_rate": [
+        "float_log",
+        0.01,
+        0.3
+      ],
+      "max_leaf_nodes": [
+        "int",
+        15,
+        127
+      ],
+      "l2_regularization": [
+        "float_log",
+        1e-06,
+        10.0
+      ],
+      "min_samples_leaf": [
+        "int",
+        10,
+        200
+      ]
+    },
+    "XGBoost": {
+      "n_estimators": [
+        "int",
+        200,
+        1000
+      ],
+      "learning_rate": [
+        "float_log",
+        0.01,
+        0.3
+      ],
+      "max_depth": [
+        "int",
+        3,
+        9
+      ],
+      "subsample": [
+        "float",
+        0.6,
+        1.0
+      ],
+      "colsample_bytree": [
+        "float",
+        0.5,
+        1.0
+      ],
+      "reg_lambda": [
+        "float_log",
+        0.001,
+        10.0
+      ],
+      "min_child_weight": [
+        "float_log",
+        1.0,
+        50.0
+      ]
+    },
+    "LightGBM": {
+      "n_estimators": [
+        "int",
+        200,
+        1000
+      ],
+      "learning_rate": [
+        "float_log",
+        0.01,
+        0.3
+      ],
+      "num_leaves": [
+        "int",
+        15,
+        127
+      ],
+      "subsample": [
+        "float",
+        0.6,
+        1.0
+      ],
+      "colsample_bytree": [
+        "float",
+        0.5,
+        1.0
+      ],
+      "reg_lambda": [
+        "float_log",
+        0.001,
+        10.0
+      ],
+      "min_child_samples": [
+        "int",
+        10,
+        200
+      ]
+    },
+    "CatBoost": {
+      "iterations": [
+        "int",
+        300,
+        1200
+      ],
+      "learning_rate": [
+        "float_log",
+        0.01,
+        0.3
+      ],
+      "depth": [
+        "int",
+        4,
+        9
+      ],
+      "l2_leaf_reg": [
+        "float_log",
+        1.0,
+        10.0
+      ]
+    },
+    "MLPRegressor": {
+      "hidden_layer_sizes": [
+        "cat",
+        [
+          [
+            64
+          ],
+          [
+            128
+          ],
+          [
+            64,
+            32
+          ],
+          [
+            128,
+            64
+          ]
+        ]
+      ],
+      "alpha": [
+        "float_log",
+        1e-06,
+        0.01
+      ],
+      "learning_rate_init": [
+        "float_log",
+        0.0001,
+        0.01
+      ]
+    }
+  }
+}
