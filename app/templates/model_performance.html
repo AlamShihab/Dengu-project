@@ -1,0 +1,82 @@
+{% extends "base.html" %}
+
+{% block title %}Model Performance - DFS{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1>Model Performance</h1>
+    <p class="subtitle">How well the deployed models forecast dengue admissions on the untouched test period, for every level, place and forecast day</p>
+
+    <section class="form-card">
+        <div class="form-grid-3">
+            <div class="form-group">
+                <label for="level-select">Level:</label>
+                <select id="level-select" class="form-control">
+                    <option value="district">Districts</option>
+                    <option value="division">Divisions</option>
+                    <option value="national">Bangladesh</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="unit-select">Place:</label>
+                <select id="unit-select" class="form-control"><option value="">All places of this level</option></select>
+            </div>
+            <div class="form-group">
+                <label for="horizon-select">Forecast day (importance, residuals, actual vs forecast):</label>
+                <select id="horizon-select" class="form-control"></select>
+            </div>
+        </div>
+        <p class="muted" id="test-note">--</p>
+    </section>
+
+    <section>
+        <h2>Metrics by Forecast Day</h2>
+        <div class="table-wrap">
+            <table>
+                <thead id="metrics-head"></thead>
+                <tbody id="metrics-body"><tr><td>Loading...</td></tr></tbody>
+            </table>
+        </div>
+        <div class="chart-container">
+            <h3 id="mae-title">MAE by forecast day</h3>
+            <div id="mae-chart" class="chart" role="img" aria-label="MAE by forecast day"></div>
+        </div>
+    </section>
+
+    <section>
+        <div class="chart-container">
+            <h3 id="series-title">Actual vs forecast on the test period</h3>
+            <div id="series-chart" class="chart" role="img" aria-label="Actual and forecast admissions over the test period"></div>
+        </div>
+        <div class="chart-container">
+            <h3>Feature importance (permutation, test sample)</h3>
+            <p class="section-note">How much the error grows when a feature is shuffled. Shows association used by the model, not cause.</p>
+            <div id="importance-chart" class="chart" role="img" aria-label="Bar chart of feature importance"></div>
+        </div>
+        <div class="chart-container">
+            <h3>Forecast errors (forecast − actual)</h3>
+            <div id="residual-chart" class="chart" role="img" aria-label="Histogram of forecast errors"></div>
+        </div>
+    </section>
+
+    <section id="topdown-section" style="display:none;">
+        <h2>Top-down district forecasts (when district reports are stale)</h2>
+        <p class="section-note">Since 3 Sep 2026 DGHS publishes division figures but no district table. District forecasts are then made
+            as division forecast × the district's share of the division in its last 28 reported days. This backtest shows how the error grows
+            with the age of the district data, compared with the direct district model (fresh district data).</p>
+        <div class="table-wrap">
+            <table><thead><tr><th class="num">District data age (days)</th><th class="num">Top-down MAE</th><th class="num">Direct MAE</th><th class="num">Rows</th></tr></thead>
+                <tbody id="topdown-body"></tbody></table>
+        </div>
+    </section>
+
+    <section>
+        <h2>Model Information</h2>
+        <div class="table-wrap"><table class="metrics-table"><tbody id="model-info"></tbody></table></div>
+    </section>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/models.js') }}"></script>
+{% endblock %}

@@ -1,0 +1,112 @@
+{% extends "base.html" %}
+
+{% block title %}Upload Data - DFS{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1>Data Upload &amp; Updates</h1>
+    <p class="subtitle">Bring the data up to date: fetch the latest DGHS reports automatically, or upload DGHS daily PDFs / a CSV or Excel table yourself</p>
+
+    <!-- Automatic update -->
+    <section class="form-card">
+        <h2>Get the latest DGHS data</h2>
+        <p class="section-note">Downloads any new DGHS Daily Dengue Press Release PDFs (district table) and the DGHS dashboard's division and
+            national figures up to today, then rebuilds the data. The deployed models then forecast Day 1-7 from the newest day. Needs the internet.</p>
+        <div class="action-buttons">
+            <button id="update-btn" class="btn btn-primary">Update from DGHS now</button>
+        </div>
+    </section>
+
+    <div class="info-card schema-card">
+        <strong>Accepted uploads</strong> (max {{ max_mb }} MB):
+        <ul>
+            <li><strong>DGHS daily PDF</strong> (e.g. <code>20261012_dengue_all.pdf</code>): the district table is read automatically, exactly as in the pipeline.</li>
+            <li><strong>CSV / Excel table</strong> with columns <code>report_date</code> (YYYY-MM-DD), <code>unit_code</code> or <code>district</code> / <code>division</code>
+                (English name or code, e.g. <code>Faridpur</code> or <code>BD3029</code>; <code>Dhaka Metro</code>; <code>Bangladesh</code>) and <code>admitted_24h</code> (new admissions in the last 24 hours).</li>
+        </ul>
+        Uploading only checks the file; adding it and re-running is a separate, confirmed step. Existing DGHS PDF data is never overwritten.
+    </div>
+
+    <section class="upload-form-section">
+        <div class="upload-card form-card">
+            <h2>Upload a File</h2>
+            <div class="drag-drop-area" id="drag-drop-area" tabindex="0" role="button" aria-label="Choose a PDF, CSV or Excel file">
+                <p>📁 Drag and drop a DGHS PDF, CSV or Excel file here</p>
+                <p class="muted">or click to select</p>
+                <input type="file" id="file-input" accept=".pdf,.csv,.xlsx" style="display: none;">
+            </div>
+            <div class="file-info" id="file-info" style="display: none;">
+                <p><strong>File:</strong> <span id="file-name">--</span> · <span id="file-size">--</span></p>
+            </div>
+            <button id="validate-btn" class="btn btn-primary" disabled>Check File</button>
+        </div>
+    </section>
+
+    <section class="validation-section" id="validation-section" style="display: none;">
+        <h2>Check Results</h2>
+        <div id="success-card" class="success-card" style="display: none;">
+            <h3 id="success-title">✅ File read successfully</h3>
+            <p id="success-message">--</p>
+            <table class="validation-table" id="summary-table"></table>
+            <div id="warning-block" style="display: none;">
+                <h4>Warnings</h4>
+                <ul id="warning-list" class="warning-items"></ul>
+            </div>
+            <h4>Preview</h4>
+            <div class="table-wrap"><table><thead id="preview-head"></thead><tbody id="preview-body"></tbody></table></div>
+        </div>
+        <div id="error-card" class="error-card" style="display: none;" role="alert">
+            <h3>❌ The file could not be accepted</h3>
+            <ul id="error-list" class="error-list"><li>--</li></ul>
+        </div>
+        <div id="merge-card" class="info-card mt-lg" style="display: none;">
+            <h3>Add this data and re-run</h3>
+            <p id="merge-summary" class="muted">--</p>
+            <h4>How much should be re-computed?</h4>
+            <div id="mode-choices" class="form-group"></div>
+            <div class="action-buttons"><button id="apply-btn" class="btn btn-primary">Add data &amp; run pipeline</button></div>
+            <p class="section-note">The current data is saved as a version first, so this can be undone - and if the run fails, the previous data is put back automatically.</p>
+        </div>
+    </section>
+
+    <section class="validation-section" id="run-section" style="display: none;">
+        <h2>Pipeline run</h2>
+        <div class="results-card">
+            <p><strong id="run-title">--</strong></p>
+            <p id="run-message" class="muted">--</p>
+            <table class="info-table"><thead><tr><th>Stage</th><th>Status</th><th class="num">Seconds</th></tr></thead>
+                <tbody id="run-stage-body"></tbody></table>
+            <h4>Latest output</h4>
+            <pre id="run-log" class="preview-info" style="max-height: 14rem; overflow: auto; white-space: pre-wrap;">--</pre>
+            <div class="action-buttons">
+                <button id="run-cancel-btn" class="btn btn-danger" style="display: none;">Stop the run</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="validation-section" id="data-section">
+        <h2>Current data</h2>
+        <div class="results-card">
+            <table class="validation-table">
+                <tr><td><strong>DGHS daily PDFs (district table)</strong></td><td id="data-pdfs">--</td></tr>
+                <tr><td><strong>DGHS dashboard (divisions, Bangladesh, Dhaka city)</strong></td><td id="data-dash">--</td></tr>
+                <tr><td><strong>Uploaded PDFs / table rows</strong></td><td id="data-uploads">--</td></tr>
+            </table>
+            <div class="action-buttons">
+                <button class="btn btn-outline btn-sm rerun" data-mode="data">Rebuild the data</button>
+                <button class="btn btn-outline btn-sm rerun" data-mode="refresh">Rebuild and refit models</button>
+                <button class="btn btn-outline btn-sm rerun" data-mode="full">Full re-analysis (hours)</button>
+            </div>
+            <h4>Version history</h4>
+            <div class="table-wrap">
+                <table class="info-table"><thead><tr><th>Version</th><th>Created</th><th>Note</th><th></th></tr></thead>
+                    <tbody id="versions-body"><tr><td colspan="4">Loading...</td></tr></tbody></table>
+            </div>
+        </div>
+    </section>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/upload.js') }}"></script>
+{% endblock %}

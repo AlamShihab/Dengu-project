@@ -1,0 +1,103 @@
+{% extends "base.html" %}
+
+{% block title %}Dashboard - DFS{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1>Dengue Forecasting System Dashboard</h1>
+    <p class="subtitle">Daily dengue hospital admissions (DGHS) · Day 1 to Day 7 forecasts for divisions and districts · machine-learning models vs. baselines on the untouched test period</p>
+
+    <!-- KPI Cards -->
+    <section class="kpi-section" aria-label="Key figures">
+        <div class="kpi-card">
+            <h3>Places Forecast</h3>
+            <p class="kpi-value" id="total-units">--</p>
+            <p class="kpi-label"><span id="unit-detail">--</span></p>
+        </div>
+        <div class="kpi-card">
+            <h3>District Test MAE</h3>
+            <p class="kpi-value" id="avg-mae">--</p>
+            <p class="kpi-label">admissions per district-day, mean over Day 1-7</p>
+        </div>
+        <div class="kpi-card">
+            <h3>Latest Data</h3>
+            <p class="kpi-value kpi-value-sm" id="data-latest">--</p>
+            <p class="kpi-label" id="data-detail">--</p>
+        </div>
+        <div class="kpi-card">
+            <h3>Deployed Models</h3>
+            <p class="kpi-value" id="num-models">--</p>
+            <p class="kpi-label" id="audit-label">Audit: --</p>
+        </div>
+    </section>
+
+    <!-- Leaderboard -->
+    <section class="leaderboard-section">
+        <h2>Model Leaderboard by Forecast Day</h2>
+        <div class="segmented" id="lb-level">
+            <button data-level="district" class="active" type="button">Districts</button>
+            <button data-level="division" type="button">Divisions</button>
+            <button data-level="national" type="button">Bangladesh</button>
+        </div>
+        <p class="section-note">Mean absolute error (admissions per place and day) on the test period <span id="test-period"></span>.
+            The ML model is chosen by cross-validation and deployed only if it beats the best baseline on cross-validation and on the test period.</p>
+        <div class="table-wrap">
+            <table class="leaderboard-table">
+                <thead>
+                    <tr>
+                        <th>Day</th><th>Best baseline</th><th class="num">Baseline MAE</th><th>ML model</th>
+                        <th class="num">ML MAE</th><th class="num">Improvement</th><th>Deployed</th><th class="num">80% range coverage</th>
+                    </tr>
+                </thead>
+                <tbody id="leaderboard-body"><tr><td colspan="8">Loading...</td></tr></tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- Charts -->
+    <section class="charts-section">
+        <h2>Performance Visualization</h2>
+        <div class="chart-container">
+            <h3>MAE by forecast day: best baseline vs deployed model</h3>
+            <div id="mae-chart" class="chart" role="img" aria-label="Line chart of test MAE by forecast day"></div>
+        </div>
+        <div class="chart-container">
+            <h3>Data coverage by district</h3>
+            <p class="section-note">Share of days with a DGHS district report, busiest districts first. Missing days are DGHS gaps (no PDF published or not readable); they are never filled in.</p>
+            <div id="coverage-chart" class="chart chart-tall" role="img" aria-label="Stacked bar chart of reported and missing days per district"></div>
+        </div>
+    </section>
+
+    <!-- Data Quality -->
+    <section class="quality-section">
+        <h2>Data Quality Metrics</h2>
+        <div class="quality-grid">
+            <div class="quality-card"><h4>DGHS reports parsed</h4><p id="q-reports">--</p></div>
+            <div class="quality-card"><h4>Days without a report</h4><p id="q-missing">--</p></div>
+            <div class="quality-card"><h4>PDF vs dashboard agreement</h4><p id="q-agree">--</p></div>
+            <div class="quality-card"><h4>Validation status</h4><p id="q-status">--</p></div>
+        </div>
+    </section>
+
+    <section class="figures-section" id="figures-section" style="display: none;">
+        <h2>Data Analysis Figures</h2>
+        <p class="section-note">Charts produced by the pipeline. Click a figure to open it full size.</p>
+        <div class="figure-grid" id="figure-grid"></div>
+    </section>
+
+    <section class="downloads-section">
+        <h2>Download Results</h2>
+        <div class="table-wrap">
+            <table>
+                <thead><tr><th>File</th><th>Contents</th><th class="num">Size (KB)</th><th>Modified</th><th></th></tr></thead>
+                <tbody id="downloads-body"><tr><td colspan="5">Loading...</td></tr></tbody>
+            </table>
+        </div>
+        <button id="downloads-toggle" class="btn-link" style="display: none;"></button>
+    </section>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/dashboard.js') }}"></script>
+{% endblock %}

@@ -1,0 +1,155 @@
+{% extends "base.html" %}
+
+{% block title %}Make Forecast - DFS{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1>Dengue Forecast Generator</h1>
+    <p class="subtitle">Choose a division, district or upazila to forecast daily dengue hospital admissions for each of the next 7 days (Day 1 to Day 7), or show every place at once</p>
+
+    <!-- Input Form -->
+    <section class="forecast-form-section">
+        <div class="form-card">
+            <h2>Forecast Parameters</h2>
+            <div class="form-group">
+                <label>Level:</label>
+                <div class="segmented" id="level-tabs" role="tablist">
+                    <button data-level="national" type="button">Bangladesh</button>
+                    <button data-level="division" type="button">Division</button>
+                    <button data-level="district" type="button" class="active">District</button>
+                    <button data-level="upazila" type="button">Upazila</button>
+                </div>
+                <p class="muted" id="level-help">Districts are the main forecast level. Dhaka city hospitals are forecast as their own unit (Dhaka Metropolitan).</p>
+            </div>
+            <div class="form-grid-3">
+                <div class="form-group" id="division-group">
+                    <label for="division-select">Division:</label>
+                    <select id="division-select" class="form-control"><option value="">-- Loading --</option></select>
+                </div>
+                <div class="form-group" id="district-group">
+                    <label for="district-select">District:</label>
+                    <select id="district-select" class="form-control"><option value="">-- Choose a division first --</option></select>
+                </div>
+                <div class="form-group" id="upazila-group">
+                    <label for="upazila-select">Upazila:</label>
+                    <select id="upazila-select" class="form-control"><option value="">-- Choose a district first --</option></select>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="horizon-slider">Forecast day (for a single-day forecast or the all-places table):</label>
+                <input type="range" id="horizon-slider" min="1" max="7" value="1" step="1" class="form-control" aria-describedby="horizon-help">
+                <div class="slider-ticks" id="slider-ticks"></div>
+                <p class="slider-value" id="horizon-help">Selected: <span id="horizon-value">Day 1</span> · one model per day, Day 1 to Day 7</p>
+            </div>
+            <div class="btn-row">
+                <button id="outlook-btn" class="btn btn-primary">Show 7-day forecast</button>
+                <button id="generate-btn" class="btn btn-outline">Forecast the selected day only</button>
+                <button id="all-btn" class="btn btn-outline">All districts: 7-day table</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Outlook: Day 1..7 for one place -->
+    <section class="forecast-results-section" id="outlook-section" style="display: none;">
+        <div class="results-card">
+            <h2>7-Day Forecast · <span id="outlook-place">--</span> <span id="outlook-method"></span></h2>
+            <p class="section-note">Forecast daily dengue hospital admissions for each of the next 7 report days, issued from data up to
+                <strong id="outlook-origin">--</strong>. One model per day ahead. The range is the 80% prediction range
+                (calibrated on cross-validation, never on the test period). Counts are by hospital location, as DGHS reports them.</p>
+            <div id="outlook-warnings" class="warning-list"></div>
+            <div class="day-cards" id="day-cards"></div>
+            <p class="muted">Total over the 7 days: <strong id="outlook-total">--</strong> admissions.</p>
+
+            <div class="chart-container">
+                <h3>Recent admissions and the 7-day forecast</h3>
+                <div id="outlook-chart" class="chart" role="img" aria-label="Recent daily dengue admissions and the forecast for Day 1 to Day 7"></div>
+            </div>
+
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Day</th><th>Date</th><th class="num">Forecast</th><th class="num">80% range</th>
+                            <th>Model</th><th class="num">Test MAE</th><th class="num">Baseline MAE</th>
+                        </tr>
+                    </thead>
+                    <tbody id="outlook-body"></tbody>
+                </table>
+            </div>
+            <div class="download-section">
+                <button id="outlook-json-btn" class="btn btn-secondary">📥 Download as JSON</button>
+                <button id="outlook-csv-btn" class="btn btn-secondary">📥 Download as CSV</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Single day -->
+    <section class="forecast-results-section" id="results-section" style="display: none;">
+        <div class="results-card">
+            <h2>Forecast Results</h2>
+            <div class="results-grid">
+                <div class="result-item"><h4>Place</h4><p id="result-place">--</p></div>
+                <div class="result-item"><h4>Forecast Date</h4><p id="result-date">--</p></div>
+                <div class="result-item"><h4>Forecast Day</h4><p id="result-horizon">--</p></div>
+                <div class="result-item"><h4>Model Used</h4><p id="result-model">--</p></div>
+            </div>
+            <div class="prediction-box">
+                <h3>Predicted dengue hospital admissions</h3>
+                <p class="prediction-value"><span id="prediction-value">--</span><span class="prediction-unit"> admissions</span></p>
+                <p class="prediction-range">80% range: <span id="confidence-range">--</span></p>
+                <p class="prediction-range">Issued from data up to <span id="origin-date">--</span> · method: <span id="result-method">--</span></p>
+            </div>
+            <div id="warnings" class="warning-list"></div>
+            <div class="metrics-box">
+                <h3>Model Metrics (test period, this level and day)</h3>
+                <table class="metrics-table">
+                    <tr><td>Model MAE (admissions per day)</td><td id="result-mae">--</td></tr>
+                    <tr><td>Best baseline MAE</td><td id="result-baseline">--</td></tr>
+                    <tr><td>Improvement over baseline</td><td id="result-improvement">--</td></tr>
+                </table>
+            </div>
+            <div class="chart-container">
+                <h3>Recent admissions and forecast</h3>
+                <div id="forecast-chart" class="chart" role="img" aria-label="Recent daily dengue admissions and the forecast"></div>
+            </div>
+            <div class="download-section">
+                <button id="download-json-btn" class="btn btn-secondary">📥 Download as JSON</button>
+                <button id="download-csv-btn" class="btn btn-secondary">📥 Download as CSV</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- All places -->
+    <section class="forecast-results-section" id="all-section" style="display: none;">
+        <div class="results-card">
+            <h2 id="all-title">All Districts</h2>
+            <p class="section-note" id="all-note">--</p>
+            <div class="download-section">
+                <button id="all-csv-btn" class="btn btn-primary">📥 Download all as CSV</button>
+            </div>
+            <div class="chart-container" id="map-container">
+                <h3 id="map-title">Map of the forecast</h3>
+                <div id="map-chart" class="chart map-chart" role="img" aria-label="Map of Bangladesh districts coloured by forecast admissions"></div>
+            </div>
+            <div class="table-wrap">
+                <table>
+                    <thead id="all-head"></thead>
+                    <tbody id="all-body"></tbody>
+                </table>
+            </div>
+            <div id="all-warnings" class="warning-list"></div>
+        </div>
+    </section>
+
+    <section id="error-section" style="display: none;">
+        <div class="error-card" role="alert">
+            <h3>❌ Error</h3>
+            <p id="error-message">--</p>
+        </div>
+    </section>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/forecast.js') }}"></script>
+{% endblock %}
