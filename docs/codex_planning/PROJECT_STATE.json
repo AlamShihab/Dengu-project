@@ -1,0 +1,113 @@
+{
+  "schema_version": 1,
+  "updated_on": "2026-10-12",
+  "timezone": "Asia/Dhaka",
+  "project_root": "C:\\Users\\USER\\Documents\\Codex\\2026-10-11\\you\\outputs\\bd-dengue-monitor",
+  "objective": "Weather_ML-format dengue forecasts for seven consecutive future days; district first, division supported, upazila when validated data permits",
+  "forecast_horizons": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "monitoring_v1_status": "complete",
+  "forecast_extension_status": "implementation_in_progress",
+  "trained_dengue_models": [],
+  "forecast_job_running": false,
+  "data_readiness": {
+    "district_history_acquired": false,
+    "upazila_history_acquired": false,
+    "active_national_days": 30,
+    "legacy_national_days_unreconciled": 283
+  },
+  "weather_reference": "C:\\Users\\USER\\Desktop\\Shihab\\Niaz Bhai\\Weather_ML\\Final Work File",
+  "legacy_dengue_reference": "C:\\Users\\USER\\Desktop\\Shihab\\Personal\\Project\\Disease Surveillance Dashboard\\bd-health-signals",
+  "tasks": [
+    {
+      "id": "F00",
+      "name": "Reference audit, data profile, implementation plan, continuation files",
+      "status": "completed"
+    },
+    {
+      "id": "F01",
+      "name": "District/upazila source and geography feasibility audit",
+      "status": "in_progress"
+    },
+    {
+      "id": "F02",
+      "name": "Acquire and validate historical daily data",
+      "status": "pending",
+      "depends_on": [
+        "F01"
+      ]
+    },
+    {
+      "id": "F03",
+      "name": "Weather-format app foundation and no-model states",
+      "status": "in_progress",
+      "depends_on": [
+        "F00"
+      ]
+    },
+    {
+      "id": "F04",
+      "name": "Preparation, availability-aware splits and features",
+      "status": "pending",
+      "depends_on": [
+        "F02"
+      ]
+    },
+    {
+      "id": "F05",
+      "name": "Baselines and model screening",
+      "status": "pending",
+      "depends_on": [
+        "F04"
+      ]
+    },
+    {
+      "id": "F06",
+      "name": "Tuning, intervals, final evaluation and promotion",
+      "status": "pending",
+      "depends_on": [
+        "F05"
+      ]
+    },
+    {
+      "id": "F07",
+      "name": "Forecast API, seven-day views, updates and logs",
+      "status": "pending",
+      "depends_on": [
+        "F03",
+        "F06"
+      ]
+    },
+    {
+      "id": "F08",
+      "name": "Acceptance tests, browser verification and delivery",
+      "status": "pending",
+      "depends_on": [
+        "F07"
+      ]
+    }
+  ],
+  "blockers": [
+    "No validated daily district training dataset acquired",
+    "No upazila daily dengue source verified"
+  ],
+  "next_action": "F01 official district source probe; F03 Flask forecast application foundation",
+  "planning_checks": [
+    "Read-only local profile completed",
+    "Weather source/templates/config/inference inspected",
+    "All continuation artifacts saved within dengue root"
+  ],
+  "prior_monitoring_checks": {
+    "backend_tests_passed": 16,
+    "metric_tests_passed": 7,
+    "note": "Prior V1 checks only; no forecast accuracy or training checks have run"
+  },
+  "entrypoint": "START_HERE.md"
+}
